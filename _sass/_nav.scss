@@ -90,6 +90,14 @@
       }
     }
   }
+
+  .btn {
+    color: $color-white;
+
+    &:hover {
+      color: $color-white;
+    }
+  }
 }
 
 // CTA button in nav
