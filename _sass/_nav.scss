@@ -133,19 +133,26 @@
   inset: 0;
   background: $color-cream;
   z-index: 999;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 2rem;
   transform: translateY(-100%);
-  transition: transform $transition-slow;
+  visibility: hidden;
+  transition: transform $transition-slow, visibility 0s $transition-slow;
   list-style: none;
   margin: 0;
   padding: 0;
 
+  @media (max-width: $bp-tablet - 1) {
+    display: flex;
+  }
+
   &--open {
     transform: translateY(0);
+    visibility: visible;
+    transition: transform $transition-slow, visibility 0s;
   }
 
   a {
