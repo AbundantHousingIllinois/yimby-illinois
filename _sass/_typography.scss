@@ -1,0 +1,44 @@
+// Typography
+body {
+  font-family: $font-body;
+  font-size: $type-body;
+  color: $color-text;
+  background-color: $color-cream;
+}
+
+h1, h2, h3 {
+  font-family: $font-display;
+  color: $color-text;
+  font-weight: 400; // DM Serif Display only has regular weight
+}
+
+h1 { font-size: $type-h1; }
+h2 { font-size: $type-h2; margin-bottom: $space-md; }
+h3 { font-size: $type-h3; }
+
+p {
+  margin-bottom: $space-sm;
+  color: $color-text-muted;
+  line-height: 1.7;
+}
+
+.section-label {
+  font-family: $font-body;
+  font-size: $type-xs;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: $color-primary;
+  margin-bottom: $space-xs;
+}
+
+.lead {
+  font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+  line-height: 1.8;
+  color: $color-text-muted;
+}
+
+strong {
+  font-weight: 600;
+  color: $color-text;
+}

@@ -1,0 +1,59 @@
+// ===========================================
+// YIMBY Illinois — Footer
+// ===========================================
+
+.footer {
+  background: $color-dark;
+  color: $color-cream;
+  padding: 3rem 0;
+}
+
+.footer__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+
+  @media (min-width: $bp-tablet) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+}
+
+.footer__brand {
+  font-family: $font-display;
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.footer__tagline {
+  font-size: $type-small;
+  color: rgba($color-cream, 0.6);
+}
+
+.footer__right {
+  text-align: center;
+
+  @media (min-width: $bp-tablet) {
+    text-align: right;
+  }
+
+  a {
+    color: $color-primary-light;
+    text-decoration: none;
+    transition: color $transition-fast;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}
+
+.footer__copyright {
+  font-size: $type-xs;
+  color: rgba($color-cream, 0.4);
+  margin-top: 0.5rem;
+}

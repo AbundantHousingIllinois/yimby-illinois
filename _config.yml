@@ -1,0 +1,28 @@
+title: YIMBY Illinois
+description: "Yes In My Backyard. Fighting for abundant, affordable housing across Illinois."
+url: ""
+baseurl: ""
+lang: en
+
+markdown: kramdown
+sass:
+  style: compressed
+  sass_dir: _sass
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+twitter:
+  card: summary_large_image
+social:
+  name: YIMBY Illinois
+
+exclude:
+  - CLAUDE.md
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
+  - vendor
+  - node_modules

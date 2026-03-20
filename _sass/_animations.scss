@@ -1,0 +1,70 @@
+// ===========================================
+// YIMBY Illinois — Animations
+// ===========================================
+
+// Scroll reveal
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+// Stagger delays
+.reveal-delay-1 { transition-delay: 0.15s; }
+.reveal-delay-2 { transition-delay: 0.30s; }
+.reveal-delay-3 { transition-delay: 0.45s; }
+
+// Hero entrance keyframes
+@keyframes heroSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero__title {
+  opacity: 0;
+  animation: heroSlideUp 0.8s ease forwards;
+}
+
+.hero__subtitle {
+  opacity: 0;
+  animation: heroSlideUp 0.8s ease 0.15s forwards;
+}
+
+.hero__actions {
+  opacity: 0;
+  animation: heroSlideUp 0.8s ease 0.3s forwards;
+}
+
+// Reduced motion
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+
+  .hero__title,
+  .hero__subtitle,
+  .hero__actions {
+    opacity: 1;
+    animation: none;
+  }
+}

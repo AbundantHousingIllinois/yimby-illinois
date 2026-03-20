@@ -1,0 +1,53 @@
+// ===========================================
+// YIMBY Illinois — Hero
+// ===========================================
+
+.hero {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: $color-cream;
+  padding-top: 5rem;
+
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.hero__pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.06;
+  pointer-events: none;
+  background-repeat: repeat-x;
+  background-position: bottom;
+  background-size: auto 40%;
+}
+
+.hero__title {
+  font-size: $type-hero;
+  font-family: $font-display;
+  color: $color-text;
+  margin-bottom: 1.5rem;
+  max-width: 800px;
+  margin-inline: auto;
+  line-height: 1.1;
+}
+
+.hero__subtitle {
+  font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+  color: $color-text-muted;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  line-height: 1.8;
+}
+
+.hero__actions {
+  justify-content: center;
+}

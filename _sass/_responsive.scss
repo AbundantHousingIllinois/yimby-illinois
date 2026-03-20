@@ -1,0 +1,70 @@
+// ===========================================
+// YIMBY Illinois — Responsive Overrides
+// ===========================================
+
+// Mobile overrides (below tablet)
+@media (max-width: $bp-tablet - 1) {
+  // Tighter section padding on mobile
+  .section {
+    padding: $space-xl 0;
+  }
+
+  // Scale down h2 a touch more if needed
+  h2,
+  .section__title {
+    font-size: clamp(1.35rem, 5vw, 1.75rem);
+  }
+
+  // Stack button groups vertically
+  .btn-group {
+    flex-direction: column;
+    align-items: stretch;
+
+    .btn {
+      text-align: center;
+    }
+  }
+
+  // Ensure minimum touch targets
+  a,
+  button,
+  input,
+  select,
+  textarea {
+    min-height: 44px;
+  }
+
+  // Legislation items: full width badge
+  .legislation__item {
+    padding: 1.25rem 1.5rem;
+  }
+
+  // Cards get slightly less padding
+  .card {
+    padding: 1.5rem;
+  }
+
+  // Action cards on mobile
+  .action-card {
+    padding: 2rem 1.5rem;
+  }
+}
+
+// Tablet and up
+@media (min-width: $bp-tablet) {
+  .nav__toggle {
+    display: none;
+  }
+
+  .nav__links {
+    display: flex;
+  }
+}
+
+// Desktop and up
+@media (min-width: $bp-desktop) {
+  // Increase section padding
+  .section {
+    padding: $space-2xl 0;
+  }
+}

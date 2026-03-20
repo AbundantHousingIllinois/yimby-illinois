@@ -1,0 +1,64 @@
+// Layout
+.container {
+  width: 100%;
+  max-width: $container-max;
+  margin: 0 auto;
+  padding: 0 $container-padding;
+}
+
+.section {
+  padding: $space-2xl 0;
+}
+
+.section--alt {
+  background-color: $color-warm-gray;
+}
+
+.section--dark {
+  background-color: $color-dark;
+  color: $color-cream;
+
+  h2, h3 { color: $color-cream; }
+  p { color: rgba($color-cream, 0.8); }
+  .section-label { color: $color-primary-light; }
+}
+
+.section--accent {
+  background-color: $color-secondary;
+  color: $color-white;
+
+  h2, h3 { color: $color-white; }
+  p { color: rgba($color-white, 0.9); }
+  .section-label { color: rgba($color-white, 0.7); }
+}
+
+.grid {
+  display: grid;
+  gap: $space-md;
+}
+
+.grid--2 {
+  @media (min-width: $bp-tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.grid--3 {
+  @media (min-width: $bp-tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (min-width: $bp-desktop) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.grid--4 {
+  @media (min-width: $bp-tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (min-width: $bp-desktop) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.text-center { text-align: center; }
