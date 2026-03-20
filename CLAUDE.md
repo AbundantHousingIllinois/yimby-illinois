@@ -44,6 +44,10 @@ Single-page site (`index.html`) composed of Jekyll includes rendered in a single
 
 **Design system** (`_sass/_variables.scss`): terracotta/teal color palette, fluid type scale, spacing tokens, shadows, breakpoints at 768px/1024px/1440px.
 
+## Deployment
+
+Pushes to `main` auto-deploy via GitHub Actions. The live site is at https://abundanthousingillinois.github.io/yimby-illinois/
+
 ## Custom Domain
 
 When a domain is purchased, add a `CNAME` file containing just the domain (e.g., `yimbyillinois.org`) and configure DNS to point to GitHub Pages. Update `url` in `_config.yml`.
