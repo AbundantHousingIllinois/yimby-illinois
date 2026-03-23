@@ -1,24 +1,15 @@
 <section class="hero" id="hero">
-  <div class="hero__pattern">
-    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none">
-      <defs>
-        <pattern id="rooflines" x="0" y="0" width="120" height="80" patternUnits="userSpaceOnUse">
-          <polyline points="0,50 30,20 60,50" fill="none" stroke="#E8DCCC" stroke-width="1.5" opacity="0.5"/>
-          <polyline points="60,50 90,25 120,50" fill="none" stroke="#E8DCCC" stroke-width="1.5" opacity="0.4"/>
-          <polyline points="30,80 60,50 90,80" fill="none" stroke="#E8DCCC" stroke-width="1" opacity="0.3"/>
-          <line x1="30" y1="20" x2="30" y2="10" stroke="#E8DCCC" stroke-width="1" opacity="0.3"/>
-          <rect x="85" y="15" width="5" height="10" fill="none" stroke="#E8DCCC" stroke-width="1" opacity="0.25"/>
-        </pattern>
-      </defs>
-      <rect width="100%" height="100%" fill="url(#rooflines)"/>
-    </svg>
-  </div>
   <div class="container">
     <div class="hero__content">
-      <h1 class="hero__title">Illinois Deserves Abundant Housing</h1>
-      <p class="hero__subtitle">We fight for housing policies that make Illinois more affordable, livable, and inclusive for everyone.</p>
-      <div class="hero__actions btn-group">
-        <a href="{{ "/about/" | relative_url }}" class="btn btn--primary btn--lg">Learn More</a>
+      <div class="hero__illustration">
+        <img src="{{ "/assets/images/3flat-logo.png" | relative_url }}" alt="Chicago three-flat building illustration" width="280" height="400">
+      </div>
+      <div class="hero__text">
+        <h1 class="hero__title">Illinois Deserves Abundant Housing</h1>
+        <p class="hero__subtitle">We fight for housing policies that make Illinois more affordable, livable, and inclusive for everyone.</p>
+        <div class="hero__actions btn-group">
+          <a href="{{ "/about/" | relative_url }}" class="btn btn--primary btn--lg">Learn More</a>
+        </div>
       </div>
     </div>
   </div>
