@@ -20,11 +20,11 @@
 
   h2, h3 { color: $color-cream; }
   p { color: rgba($color-cream, 0.8); }
-  .section-label { color: $color-primary-light; }
+  .section-label { color: rgba($color-cream, 0.7); }
 }
 
 .section--accent {
-  background-color: $color-secondary;
+  background-color: $color-dark;
   color: $color-white;
 
   h2, h3 { color: $color-white; }
