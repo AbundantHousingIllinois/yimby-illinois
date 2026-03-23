@@ -42,12 +42,12 @@
   }
 
   a {
-    color: $color-primary-light;
+    color: rgba($color-cream, 0.8);
     text-decoration: none;
     transition: color $transition-fast;
 
     &:hover {
-      color: $color-primary;
+      color: $color-cream;
     }
   }
 }
