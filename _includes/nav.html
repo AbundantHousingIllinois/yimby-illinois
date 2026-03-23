@@ -1,14 +1,15 @@
 <nav class="nav" id="nav">
   <div class="container">
     <div class="nav__inner">
-      <a href="#hero" class="nav__logo">
+      <a href="{{ "/" | relative_url }}" class="nav__logo">
         <span class="nav__logo-yimby">YIMBY</span> Illinois
       </a>
       <div class="nav__links">
-        <a href="#about" class="nav__link">About</a>
-        <a href="#priorities" class="nav__link">Priorities</a>
-        <a href="#legislation" class="nav__link">Legislation</a>
-        <a href="#staff" class="nav__link">Staff</a>
+        <a href="{{ "/about/" | relative_url }}" class="nav__link">About</a>
+        <a href="{{ "/priorities/" | relative_url }}" class="nav__link">Priorities</a>
+        <a href="{{ "/legislation/" | relative_url }}" class="nav__link">Legislation</a>
+        <a href="{{ "/press/" | relative_url }}" class="nav__link">Press</a>
+        <a href="{{ "/staff/" | relative_url }}" class="nav__link">Staff</a>
       </div>
       <button class="nav__toggle" aria-label="Menu">
         <span></span>
@@ -19,8 +20,9 @@
   </div>
 </nav>
 <div class="nav__mobile" id="nav-mobile">
-  <a href="#about" class="nav__link">About</a>
-  <a href="#priorities" class="nav__link">Priorities</a>
-  <a href="#legislation" class="nav__link">Legislation</a>
-  <a href="#staff" class="nav__link">Staff</a>
+  <a href="{{ "/about/" | relative_url }}" class="nav__link">About</a>
+  <a href="{{ "/priorities/" | relative_url }}" class="nav__link">Priorities</a>
+  <a href="{{ "/legislation/" | relative_url }}" class="nav__link">Legislation</a>
+  <a href="{{ "/press/" | relative_url }}" class="nav__link">Press</a>
+  <a href="{{ "/staff/" | relative_url }}" class="nav__link">Staff</a>
 </div>

@@ -33,6 +33,9 @@ document.addEventListener('DOMContentLoaded', () => {
       { threshold: 0 }
     );
     heroObserver.observe(hero);
+  } else if (nav) {
+    // Inner pages without hero — always show scrolled nav
+    nav.classList.add('nav--scrolled');
   }
 
   // ---- Scroll reveal ----
@@ -54,28 +57,14 @@ document.addEventListener('DOMContentLoaded', () => {
     reveals.forEach(el => revealObserver.observe(el));
   }
 
-  // ---- Active nav highlight ----
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav__links a');
+  // ---- Active nav highlight (path-based) ----
+  const navLinks = document.querySelectorAll('.nav__links .nav__link');
+  const currentPath = window.location.pathname;
 
-  if (sections.length && navLinks.length) {
-    const sectionObserver = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const id = entry.target.getAttribute('id');
-            navLinks.forEach(link => {
-              link.classList.toggle(
-                'active',
-                link.getAttribute('href') === `#${id}`
-              );
-            });
-          }
-        });
-      },
-      { rootMargin: '-50% 0px' }
-    );
-
-    sections.forEach(section => sectionObserver.observe(section));
-  }
+  navLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    if (href && currentPath.endsWith(href.replace(/\/$/, '') + '/') || currentPath === href) {
+      link.classList.add('active');
+    }
+  });
 });
