@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Public-facing single-page website for YIMBY Illinois, a state-level housing advocacy org affiliated with Abundant Housing Illinois and a member of the IL Homes for All coalition. Licensed under MIT.
+Public-facing multi-page website for YIMBY Illinois, a state-level housing advocacy org affiliated with Abundant Housing Illinois and a member of the IL Homes for All coalition. Licensed under MIT.
 
 ## Tech Stack
 
@@ -32,17 +32,15 @@ Note: System Ruby on macOS is 2.6 — too old. Use `rbenv` or `brew install ruby
 
 ## Architecture
 
-Single-page site (`index.html`) composed of Jekyll includes rendered in a single layout.
-
-**Page flow** (top to bottom): nav → hero → about → priorities → legislation → coalition → get-involved → footer
+Multi-page Jekyll site. The home page (`index.html`) shows the hero section; other content lives on dedicated pages (`about.html`, `priorities.html`, `legislation.html`, `press.html`, `staff.html`).
 
 **Key directories:**
 - `_layouts/default.html` — sole HTML shell (head, nav, content, footer, JS)
-- `_includes/` — one partial per section (nav, hero, about, priorities, legislation, coalition, get-involved, footer, head)
+- `_includes/` — shared partials (nav, hero, head, footer) and section partials used by individual pages
 - `_sass/` — modular partials imported by `assets/css/main.scss`. Design tokens live in `_variables.scss`
 - `assets/js/main.js` — IntersectionObserver-based: mobile nav toggle, sticky nav, scroll-reveal animations, active nav highlighting
 
-**Design system** (`_sass/_variables.scss`): terracotta/teal color palette, fluid type scale, spacing tokens, shadows, breakpoints at 768px/1024px/1440px.
+**Design system** (`_sass/_variables.scss`): monochrome color palette, fluid type scale, spacing tokens, shadows, breakpoints at 768px/1024px/1440px.
 
 ## Deployment
 
@@ -54,4 +52,4 @@ When a domain is purchased, add a `CNAME` file containing just the domain (e.g.,
 
 ## Content Updates
 
-Section content lives directly in `_includes/*.html` files. To update copy, edit the relevant include. Legislation items are in `_includes/legislation.html` — add/remove `legislation__item` divs as bills change.
+Section content lives in top-level page files (`about.html`, `priorities.html`, etc.) and their associated `_includes/*.html` partials. Legislation items are in `_includes/legislation.html` — add/remove `legislation__item` divs as bills change.
