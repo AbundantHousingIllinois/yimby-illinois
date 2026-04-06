@@ -32,7 +32,7 @@ Note: System Ruby on macOS is 2.6 — too old. Use `rbenv` or `brew install ruby
 
 ## Architecture
 
-Multi-page Jekyll site. The home page (`index.html`) shows the hero section; other content lives on dedicated pages (`about.html`, `priorities.html`, `legislation.html`, `press.html`, `staff.html`).
+Multi-page Jekyll site. The home page (`index.html`) shows the hero section; other content lives on dedicated pages (`about.html`, `priorities.html`, `legislation.html`, `staff.html`).
 
 **Key directories:**
 - `_layouts/default.html` — sole HTML shell (head, nav, content, footer, JS)
@@ -44,11 +44,9 @@ Multi-page Jekyll site. The home page (`index.html`) shows the hero section; oth
 
 ## Deployment
 
-Pushes to `main` auto-deploy via GitHub Actions. The live site is at https://abundanthousingillinois.github.io/yimby-illinois/
+Pushes to `main` auto-deploy via GitHub Actions. The live site is at https://yimbyillinois.org/
 
-## Custom Domain
-
-When a domain is purchased, add a `CNAME` file containing just the domain (e.g., `yimbyillinois.org`) and configure DNS to point to GitHub Pages. Update `url` in `_config.yml`.
+DNS is managed via Squarespace Domains, pointing to GitHub Pages IPs. The `CNAME` file in the repo root configures GitHub Pages to serve from the custom domain. HTTPS is enforced.
 
 ## Content Updates
 

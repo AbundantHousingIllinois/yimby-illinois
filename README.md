@@ -1,12 +1,12 @@
 # YIMBY Illinois
 
-Public-facing website for [YIMBY Illinois](https://abundanthousingillinois.github.io/yimby-illinois/), a state-level organization pushing for YIMBY housing policies in Illinois.
+Public-facing website for [YIMBY Illinois](https://yimbyillinois.org), a state-level organization pushing for YIMBY housing policies in Illinois.
 
 Affiliated with [Abundant Housing Illinois](https://abundanthousingillinois.org) and a member of the [IL Homes for All](https://ilhomesforall.org) coalition.
 
 ## Live Site
 
-**https://abundanthousingillinois.github.io/yimby-illinois/**
+**https://yimbyillinois.org**
 
 ## Tech Stack
 
@@ -30,10 +30,7 @@ Pushes to `main` automatically build and deploy via GitHub Actions (`.github/wor
 
 ## Custom Domain
 
-When a domain is purchased:
-1. Add a `CNAME` file containing the domain (e.g., `yimbyillinois.org`)
-2. Update `url` in `_config.yml`
-3. Configure DNS with your registrar to point to GitHub Pages IPs
+The site is served at `yimbyillinois.org`. DNS is managed via Squarespace Domains, pointing to GitHub Pages IPs. The `CNAME` file in the repo root configures GitHub Pages to serve from the custom domain.
 
 ## Content Updates
 
