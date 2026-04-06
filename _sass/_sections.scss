@@ -245,53 +245,6 @@
   margin-bottom: 0;
 }
 
-// ----- Press -----
-
-.press-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.press-item {
-  background: $color-white;
-  padding: 1.5rem 2rem;
-  border-radius: $radius-md;
-  box-shadow: $shadow-sm;
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-
-  @media (min-width: $bp-tablet) {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1.5rem;
-  }
-}
-
-.press-item__title {
-  font-family: $font-display;
-  font-size: $type-h3;
-  margin-bottom: 0;
-
-  a {
-    color: $color-text;
-    text-decoration: none;
-
-    &:hover {
-      color: $color-primary;
-    }
-  }
-}
-
-.press-item__meta {
-  font-size: $type-small;
-  color: $color-text-muted;
-  margin-bottom: 0;
-  white-space: nowrap;
-}
-
 // ----- Action Cards (legacy) -----
 
 .action-card {
