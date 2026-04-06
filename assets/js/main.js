@@ -57,6 +57,19 @@ document.addEventListener('DOMContentLoaded', () => {
     reveals.forEach(el => revealObserver.observe(el));
   }
 
+  // ---- Staff email assembly ----
+  document.querySelectorAll('.staff-card__email').forEach(el => {
+    const name = el.dataset.name;
+    const domain = el.dataset.domain;
+    if (name && domain) {
+      const addr = name + '@' + domain;
+      const link = document.createElement('a');
+      link.href = 'mailto:' + addr;
+      link.textContent = addr;
+      el.appendChild(link);
+    }
+  });
+
   // ---- Active nav highlight (path-based) ----
   const navLinks = document.querySelectorAll('.nav__links .nav__link');
   const currentPath = window.location.pathname;

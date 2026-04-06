@@ -245,6 +245,21 @@
   margin-bottom: 0;
 }
 
+.staff-card__email {
+  font-size: $type-small;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+
+  a {
+    color: $color-text-muted;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
 // ----- Action Cards (legacy) -----
 
 .action-card {
