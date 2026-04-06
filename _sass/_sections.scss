@@ -93,11 +93,13 @@
 }
 
 .card__link {
-  margin-top: 1rem;
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid $color-rule;
 
   a {
     font-size: $type-small;
-    color: $color-text-muted;
+    color: $color-primary-light;
     text-decoration: none;
 
     &:hover {
