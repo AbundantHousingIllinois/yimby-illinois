@@ -92,6 +92,20 @@
   }
 }
 
+.card__link {
+  margin-top: 1rem;
+
+  a {
+    font-size: $type-small;
+    color: $color-text-muted;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
 .card__icon {
   width: 48px;
   height: 48px;
