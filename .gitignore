@@ -21,3 +21,6 @@ Gemfile.lock
 .claude/
 .playwright-mcp/
 .superpowers/
+
+# Root-level screenshots
+/*.png
